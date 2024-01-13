@@ -11,8 +11,7 @@ print(os.listdir(m))
 
 destination = "D:\\Abdul Rehman\\Downloads_Backup\Images"
 
-if m.endswith(('.txt')):
-        
+if m.endswith((".txt")):
     dest = shutil.move(source, destination, copy_function="Move")
 else:
     print("Unable to Fetch it")

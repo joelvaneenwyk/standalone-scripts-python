@@ -1,4 +1,4 @@
-'''
+"""
 Handling the Windows tab using selenium webdriver with Python
 
 Basics which is necessary to understand
@@ -19,13 +19,17 @@ Remeber difference between the two .quit() and .close()
     --> quit() terminate the browser
     --> close() terminate the current tab on the browser
 
-'''
+"""
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-driver =webdriver.Chrome(executable_path="chromeDriver.exe")
+
+driver = webdriver.Chrome(executable_path="chromeDriver.exe")
 driver.get("https://demo.automationtesting.in/Windows.html")
-clicked_element = driver.find_element(By.XPATH,"//a[@href='http://www.selenium.dev']//button[@class='btn btn-info'][normalize-space()='click']").click()
+clicked_element = driver.find_element(
+    By.XPATH,
+    "//a[@href='http://www.selenium.dev']//button[@class='btn btn-info'][normalize-space()='click']",
+).click()
 time.sleep(2)
 print(driver.current_window_handle)
 tabs = driver.window_handles
@@ -35,6 +39,3 @@ for tab in tabs:
     print(driver.title)
     driver.close()
 driver.quit()
-
-
-

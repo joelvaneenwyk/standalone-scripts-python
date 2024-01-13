@@ -4,14 +4,16 @@
 
 
 for _ in range(int(input())):
-    x1, y1, x2, y2 = map(int, input().split())  # This will parse input to x1,y1,x2 and y2
+    x1, y1, x2, y2 = map(
+        int, input().split()
+    )  # This will parse input to x1,y1,x2 and y2
     if x1 != x2 and y1 != y2:
-        print('sad')
+        print("sad")
     elif x1 == x2 and y1 < y2:
-        print('up')
+        print("up")
     elif x1 == x2 and y1 > y2:
-        print('down')
+        print("down")
     elif y1 == y2 and x1 < x2:
-        print('right')
+        print("right")
     elif y1 == y2 and x1 > x2:
-        print('left')
+        print("left")

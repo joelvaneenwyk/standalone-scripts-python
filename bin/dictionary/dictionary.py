@@ -5,7 +5,7 @@ def extractInfo(synset):
     """
     get string containing definition from a synset
     """
-    out = synset.pos() + ' : '
+    out = synset.pos() + " : "
     out += synset.definition()
 
     return out
@@ -17,9 +17,9 @@ def definition(word):
 
     for i in ssets:
         # ensure words in synsets are same
-        if i.name().split('.')[0] == word:
+        if i.name().split(".")[0] == word:
             info = extractInfo(i)
             defns.append(info)
 
     # return defns
-    return '\n'.join(defns)
+    return "\n".join(defns)

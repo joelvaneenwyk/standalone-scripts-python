@@ -1,9 +1,9 @@
-key = 'abcdefghijklmnopqrstuvwxyz'
+key = "abcdefghijklmnopqrstuvwxyz"
 
 
 def encrypt(n, plaintext):
     """Encrypt the string and return the ciphertext"""
-    result = ''
+    result = ""
 
     for l in plaintext.lower():
         try:
@@ -17,7 +17,7 @@ def encrypt(n, plaintext):
 
 def decrypt(n, ciphertext):
     """Decrypt the string and return the plaintext"""
-    result = ''
+    result = ""
 
     for l in ciphertext:
         try:
@@ -34,9 +34,9 @@ ans = input("Encrypt or Decrypt ? ")
 ans = ans.lower()
 k = input("Enter message : ")
 nn = int(input("Enter number of rotation : "))
-if ans == 'encrypt':
+if ans == "encrypt":
     ret = encrypt(nn, k)
-    print('Encrytped message: %s' % ret)
+    print("Encrytped message: %s" % ret)
 else:
     ret = decrypt(nn, k)
-    print('Decrytped message: %s' % ret)
+    print("Decrytped message: %s" % ret)

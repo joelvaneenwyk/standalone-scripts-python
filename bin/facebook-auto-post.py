@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from time import sleepfrom selenium.common.exceptions import TimeoutException
+from time import sleep
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
@@ -10,7 +11,7 @@ import time
 import getpass
 
 driver = webdriver.Firefox()
-driver.get('https://www.facebook.com/')
+driver.get("https://www.facebook.com/")
 print("facebook opened...")
 time.sleep(2)
 Email = raw_input("Enter your Email ID:")

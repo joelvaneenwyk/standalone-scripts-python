@@ -1,4 +1,4 @@
-'''
+"""
 When performing API testing we manily work on the cookies and determine 
 So simple things around the cookies are demonstrate which are manily used by QA/Developer during building the website
 
@@ -8,19 +8,19 @@ So simple things around the cookies are demonstrate which are manily used by QA/
 (iv)    driver.delete_all_cookies() --------------------------------------------->  Deleting all the cookies
 (v)     driver.delete_cookie(name)----------------------------------------------->  Deleting individual cookie
 
-'''
-
+"""
 
 
 from selenium import webdriver
-from selenium.webdriver.common.by   import By
+from selenium.webdriver.common.by import By
 import time
-driver =webdriver.Chrome(executable_path="chromeDriver.exe")
+
+driver = webdriver.Chrome(executable_path="chromeDriver.exe")
 driver.get("https://www.linkedin.com/in/mohit-peshwani/")
 cookies = driver.get_cookies()
 # get all the cookies
 # print(cookies)  --------------------> print all the cookies with list not looks good uncomment it for better understanding while performing
-driver.add_cookie({"name":"python","value":"mohit"})
+driver.add_cookie({"name": "python", "value": "mohit"})
 
 for cookie in cookies:
     print(cookie)
