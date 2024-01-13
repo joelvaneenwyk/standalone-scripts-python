@@ -1,6 +1,33 @@
 import time
-a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+a = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+]
 
 
 def encrypt(msg):
@@ -8,7 +35,7 @@ def encrypt(msg):
     enc = ""
     for i in msg:
         try:
-            enc = enc + a[int((a.index(i)+off)) % 26]
+            enc = enc + a[int((a.index(i) + off)) % 26]
         except ValueError:
             enc += i
     return enc
@@ -19,7 +46,7 @@ def decrypt(msg):
     dec = ""
     for i in msg:
         try:
-            dec = dec + a[int((a.index(i)-off)) % 26]
+            dec = dec + a[int((a.index(i) - off)) % 26]
         except ValueError:
             dec += i
     return dec
@@ -35,7 +62,7 @@ print("Message sent is       : %s " % enc)
 
 # Server Side
 time.sleep(2)
-f = open('server.txt', 'w+')
+f = open("server.txt", "w+")
 f.write(enc)
 f.close()
 
@@ -43,7 +70,7 @@ f.close()
 print()
 print("Receiving message...")
 time.sleep(2)
-f = open('server.txt', 'r+')
+f = open("server.txt", "r+")
 msg = f.read()
 print("Message received is   : %s " % msg)
 print()

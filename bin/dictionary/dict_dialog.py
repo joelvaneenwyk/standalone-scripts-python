@@ -43,14 +43,13 @@ class Dict_Dialog(object):
         word = self.searchText.text()
         defn = definition(word)
 
-        if defn != '':
+        if defn != "":
             self.resultText.setText(defn)
         else:
-            self.resultText.setText('definition not found')
+            self.resultText.setText("definition not found")
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.searchText.setPlaceholderText(
-            _translate("Dialog", "word to search"))
+        self.searchText.setPlaceholderText(_translate("Dialog", "word to search"))
         self.searchButton.setText(_translate("Dialog", "search"))

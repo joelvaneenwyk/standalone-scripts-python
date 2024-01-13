@@ -3,7 +3,8 @@ import os.path
 import numpy as np
 from PIL import Image
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+
     def image_classifier(path):
         valid_images = [".jpg", ".gif", ".png", ".tga"]
         imgs = []
